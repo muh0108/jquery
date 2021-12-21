@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery.js"></script>
+    <script>
+        $(function () {
+            var arr1=["서울","대전","대구","부산"]
+            var arr2=$.map(arr1, function (value,index) {
+                if(index == 1){
+                    return value;
+                }
+            });
+            console.log(arr2);
+            console.log("======first end======");
+
+            var arr3=$.grep(arr1, function (value,index) {
+                if(value == "부산"){
+                    return true;
+                }else{
+                    return false;
+                }
+            });
+            console.log(arr3);
+            console.log("======second end======");
+        });
+        
+
+    </script>
+</head>
+<body>
+</body>
+</html>
